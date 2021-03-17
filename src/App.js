@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Inicio from './pages/Inicio';
+import Login from './pages/Login';
+import Registro from './pages/Registro';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		/**
+		 * En ReactJS no utilizamos class para referirinos a una clase
+		 * de diseño css, en su lugar utilizamos
+		 * className
+		 */
+		<div className='container'>
+			<div className='row'>
+				<div className='col-sm-4 bg-danger'>
+					<Inicio />
+				</div>
+				<div className='col-sm-4 bg-warning'>
+					<Login />
+				</div>
+				<div className='col-sm-4 bg-success'>
+					<Registro />
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
