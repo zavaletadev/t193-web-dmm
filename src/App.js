@@ -1,28 +1,58 @@
 import React from 'react';
+
+/**
+ * Agregamos las librerías de Router Dom para
+ * poder generar una app web con navegacion
+ * por rutas
+ */
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+} from 'react-router-dom';
+import AdminApp from './components/AdminApp';
+
+/**
+ * La estructura de un arbol de navegación de ReactJS es el siguiente:
+ * Router ----> Contenedor de un arbol de navegación
+ * Switch ----> Indica los elementos qye van a generar un cambio
+ *              de contenido en la url
+ * Route ----> Contenido que va a cambiar
+ */
+
 import Inicio from './pages/Inicio';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
 
 function App() {
 	return (
-		/**
-		 * En ReactJS no utilizamos class para referirinos a una clase
-		 * de diseño css, en su lugar utilizamos
-		 * className
-		 */
-		<div className='container'>
-			<div className='row'>
-				<div className='col-sm-4 bg-danger'>
+		<Router>
+			<Switch>
+				{/**
+				 * Un route (eq. Screen)
+				 * 1.- Url con la que mostraremos este componente
+				 * ******2.- Si la url es exacta o no
+				 */}
+				<Route path='/' exact>
 					<Inicio />
-				</div>
-				<div className='col-sm-4 bg-warning'>
+				</Route>
+
+				<Route path='/login' exact>
 					<Login />
-				</div>
-				<div className='col-sm-4 bg-success'>
+				</Route>
+
+				<Route path='/registro'>
 					<Registro />
-				</div>
-			</div>
-		</div>
+				</Route>
+
+				{/**
+				 * Sección de Admin (Panel)
+				 */}
+				<Route path='/admin'>
+					<AdminApp />
+				</Route>
+			</Switch>
+		</Router>
 	);
 }
 
