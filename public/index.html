@@ -7,7 +7,6 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1"
 		/>
-		<meta name="theme-color" content="#000000" />
 		<meta
 			name="description"
 			content="Web site created using create-react-app"
@@ -24,6 +23,14 @@
 			rel="manifest"
 			href="%PUBLIC_URL%/manifest.json"
 		/>
+		<link
+			rel="stylesheet"
+			href="%PUBLIC_URL%/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="%PUBLIC_URL%/css/all.css"
+		/>
 		<!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -33,24 +40,9 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-		<title>Admin películas</title>
+		<title>Appelis</title>
 
-		<!-- 
-            Agregamos boostrap como una 
-            referencia
-        -->
-		<link
-			rel="stylesheet"
-			href="%PUBLIC_URL%/css/bootstrap.min.css"
-		/>
-
-		<!-- FontAwesome 5-->
-		<link
-			rel="stylesheet"
-			href="%PUBLIC_URL%/css/all.css"
-		/>
-
-		<!-- Template Admin -->
+		<!-- Admin Template-->
 		<link
 			rel="stylesheet"
 			href="%PUBLIC_URL%/assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css"
@@ -63,18 +55,12 @@
 			rel="stylesheet"
 			href="%PUBLIC_URL%/assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="%PUBLIC_URL%/assets/vendors/css/vendor.bundle.base.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="%PUBLIC_URL%/assets/vendors/css/vendor.bundle.addons.css"
-		/>
+
 		<link
 			rel="stylesheet"
 			href="%PUBLIC_URL%/assets/css/shared/style.css"
 		/>
+
 		<link
 			rel="stylesheet"
 			href="%PUBLIC_URL%/assets/css/demo_1/style.css"
@@ -84,11 +70,10 @@
 		style="
 			background: url('%PUBLIC_URL%/images/fondoweb.jpg')
 				no-repeat center center fixed;
-			background-size: cover;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
-			-ms-background-size: cover;
+			background-size: cover;
 		"
 	>
 		<noscript
@@ -106,6 +91,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     --></body>
+
+	<!-- Scripts -->
 	<script
 		type="text/javascript"
 		src="%PUBLIC_URL%/js/bootstrap.min.js"
